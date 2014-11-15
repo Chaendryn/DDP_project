@@ -1,11 +1,11 @@
-Test Pres
+Test Pres - Playing
 ========================================================
 author: Chaen
 date: `r date()`
 
 First Slide
 ========================================================
-
+transition: rotate
 For more details on authoring R presentations click the
 **Help** button on the toolbar.
 
