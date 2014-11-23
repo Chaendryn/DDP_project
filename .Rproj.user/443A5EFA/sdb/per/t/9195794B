@@ -1,0 +1,16 @@
+{
+    "contents" : "require(shiny)\nrequire(RCurl)\nrequire(tm)\nrequire(XML)\nrequire(wordcloud)\nrequire(RColorBrewer)\n\n     \nshinyServer(function(input, output, session) {\n      \n      output$mychart <- renderLineChart({\n            # Return a data frame. Each column will be a series in the line chart.\n            data.frame(\n                  Sine = sin(1:100/10 + input$sinePhase * pi/180) * input$sineAmplitude,\n                  Cosine = 0.5 * cos(1:100/10),\n                  \"Sine 2\" = sin(1:100/10) * 0.25 + 0.5\n            )\n      })\n})",
+    "created" : 1416160496825.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3478726459",
+    "id" : "9195794B",
+    "lastKnownWriteTime" : 1416173038,
+    "path" : "C:/Users/yolandek/Videos/Coursera/Data Science Certificate/9. Data Products/Project/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

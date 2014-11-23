@@ -1,0 +1,16 @@
+{
+    "contents" : "#check_group>*{\n      \n      float: left; \n      margin-right:15px;\n      height: 10px;\n      \n} \n\n#check_group {height: 10px;}",
+    "created" : 1416749329479.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3020183916",
+    "id" : "FAE668B8",
+    "lastKnownWriteTime" : 1416749385,
+    "path" : "C:/Users/yolandek/Videos/Coursera/Data Science Certificate/9. Data Products/Project/Trendify/www/overrides.css",
+    "project_path" : "www/overrides.css",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "css"
+}

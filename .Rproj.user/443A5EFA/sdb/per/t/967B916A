@@ -1,0 +1,16 @@
+{
+    "contents" : "require(shiny)\n\nshinyUI(fluidPage(\n      titlePanel(\"Markeology - Excavating your Bookmarks\"),\n      sidebarLayout(\n            sidebarPanel(\n                  textInput(inputId = 'dirname', label = \"Choose a Name for your file directory\"),\n                  \n                  \n                  fileInput('file1', 'Choose a bookmark File',\n                            accept=c('text/csv', \n                                     'text/comma-separated-values,text/plain', \n                                     '.csv',\n                                     '.html',\n                                     '.htm')),\n                  tags$hr(),\n                  checkboxInput('header', 'Header', TRUE),\n                  radioButtons('sep', 'Separator',\n                               c(Comma=',',\n                                 Semicolon=';',\n                                 Tab='\\t'),\n                               ','),\n                  radioButtons('quote', 'Quote',\n                               c(None='',\n                                 'Double Quote'='\"',\n                                 'Single Quote'=\"'\"),\n                               '\"')\n            ),\n            mainPanel(\n                  tableOutput('contents'),\n                  textOutput('dirname'),\n                  plotOutput('plot1')\n            )\n      )\n))",
+    "created" : 1416166008208.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1755916191",
+    "id" : "967B916A",
+    "lastKnownWriteTime" : 1416156299,
+    "path" : "C:/Users/yolandek/Videos/Coursera/Data Science Certificate/9. Data Products/Project/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
