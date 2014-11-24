@@ -2,6 +2,7 @@ Trendify - Automotive Trends Demystified
 ========================================================
 author: Vehicle Brand Search Trends in South Africa (2004-2014)
 date: Mon Nov 24 23:54:21 2014
+date: Tue Nov 25 00:20:52 2014
 transition: rotate
 css: custom.css
 
