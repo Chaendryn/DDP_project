@@ -1,0 +1,88 @@
+Trendify - Automotive Trends Demystified
+========================================================
+author: Vehicle Brand Search Trends in South Africa (2004-2014)
+date: `r date()`
+transition: rotate
+css: custom.css
+
+Why it matters
+========================================================
+type: custom1
+<p>The automotive market in South Africa is a hotly contested one.  With the myriad of brands available to the average consumer and more entering the market as trade with the BRICS countries increases, it has become vitally important to provide your automotive customers with insights into their own brand strength and the brand strength of their top competitors. <p>Search trend analysis is a tool that can aid you in providing your customer with relevant information on the movement within their markets.
+
+<h4>Trendify provides the following key indicators:  </h4>
+* An easy comparison of vehicle make search trends from Google Trends in a given year, based on number of searches for the brand term per month.  
+* Basic correlation plots for quick insights into potential mavericks that were not on the radar.  
+* Comparison summary statistics on the selected brands.  
+
+Case Study - Global Financial Crisis
+========================================================
+type: custom2
+```{r, echo=FALSE}
+library(reshape2)
+library(ggplot2)
+data <- readRDS("vData.Rds")
+data_long <- melt(data, id = c("Year", "Month"))
+
+subset_data <- data_long[(data_long$variable %in% c("mercedes", "toyota", "bmw") & data$Year == 2009), ] 
+ggVeh <- (qplot(x=Month, y=value, data=subset_data, color=variable, geom = c("path"), main = "Search Trends 2009"))
+ggVeh
+
+
+```
+***
+```{r, echo=FALSE}
+library(graphics)
+library(stats)
+lv <- (names(data) %in% c("mercedes", "toyota", "bmw"))
+tableData2 <- data[data$Year == 2009, lv]
+
+## The following code and figure is adapted from the help file for pairs and was found on http://personality-project.org/r/r.graphics.html
+## Put (absolute) correlations on the upper panels, with size proportional to the correlations.
+## Creating the function (panel.cor)
+panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
+{
+      usr <- par("usr"); on.exit(par(usr))
+      par(usr = c(0, 1, 0, 1))
+      r = cor(x, y)
+      txt <- format(c(r, 0.123456789), digits=digits)[1]
+      txt <- paste(prefix, txt, sep="")
+      if(missing(cex.cor)) cex <- 0.5/strwidth(txt)
+      text(0.5, 0.5, txt, cex = cex * abs(r))
+}
+
+## Plotting the pairs plot matrix
+corplot <- pairs(tableData2, lower.panel=panel.smooth, upper.panel=panel.cor, main = "Correlation Pairs Plot 2009")
+
+```
+
+
+Gaining Insights
+========================================================
+type: custom3
+
+<p>The impact of the Global Financial Crisis in 2008 and 2009 hit the automotive industry hard.  Search volume on more affordable vehicles such as Toyota remained fairly steady with an upward trend towards the end of 2009.  The surprising insight is that interest in luxury brands such as the Mercedez climbed from a low base of only 119 searches in January, to 268 in December.  Conversely, the number of searches for BMW and Toyota dropped sharply in December to end the year at a similar point than it started in January.  
+
+
+```{r echo=FALSE}
+summary(tableData2)
+```
+
+<p>Data such as this can be used to spark questions and debate, which in turn leads to the synthesis of ideas and generation of insigths ... which is exactly what your customer needs to in form their marketing and advertising strategies for the year ahead.
+
+Conclusion
+========================================================
+type: custom4
+<p>Trendify gives you the tools to explore your customers market, generate business insights and to come to the table with innovations and ideas.  This allows you to become something more than a service provider; you become a valued partner in their business.
+
+<p>Try out [Trendify](http://chaendryn.shinyapps.io/Trendify) at [http://chaendryn.shinyapps.io/Trendify](http://chaendryn.shinyapps.io/Trendify). 
+
+<h4>Looking ahead:</h4>
+
+<p>A sneak peak of features in the pipeline for Trendify 
+* Customisable trend data searches allowing the comparison of up to 4 user selected search terms to uncover hidden influencers.  
+* More analysis tools such as statistical model fitting.  
+
+
+
+

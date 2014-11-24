@@ -1,0 +1,58 @@
+.custom1 .reveal .state-background {
+  background: #fffdf4;
+} 
+
+.custom1 .reveal h1 {color: #468966; font-weight: bold; font-size: 50px;}
+.custom1 .reveal h2 {color: #468966; font-weight: bold; font-size: 50px;}
+.custom1 .reveal h3 {color: #468966; font-weight: bold; font-size: 50px;}
+.custom1 .reveal h4 {color: #468966; font-weight: bold; font-size: 30px;}
+.custom1 .reveal p, 
+.custom1 .reveal li {color: black; font-size: 24px; line-height: 26px}
+
+.custom2 .reveal .state-background {
+  background: #fffdf4;
+} 
+
+.custom2 .reveal h1 {color: #ffb03b; font-weight: bold; font-size: 50px;}
+.custom2 .reveal h2 {color: #ffb03b; font-weight: bold; font-size: 50px;}
+.custom2 .reveal h3 {color: #ffb03b; font-weight: bold; font-size: 50px;}
+.custom2 .reveal h4 {color: #ffb03b; font-weight: bold; font-size: 30px;}
+.custom2 .reveal p, 
+.custom2 .reveal li {color: black; font-size: 24px; line-height: 26px}
+
+.custom3 .reveal .state-background {
+  background: #fffdf4;
+} 
+
+.custom3 .reveal h1 {color: #b64926; font-weight: bold; font-size: 50px;}
+.custom3 .reveal h2 {color: #b64926; font-weight: bold; font-size: 50px;}
+.custom3 .reveal h3 {color: #b64926; font-weight: bold; font-size: 50px;}
+.custom3 .reveal h4 {color: #b64926; font-weight: bold; font-size: 30px;}
+.custom3 .reveal p, 
+.custom3 .reveal li {color: black; font-size: 24px; line-height: 26px}
+
+.custom4 .reveal .state-background {
+  background: #fffdf4;
+} 
+
+.custom4 .reveal h1 {color: #105b63; font-weight: bold; font-size: 50px;}
+.custom4 .reveal h2 {color: #105b63; font-weight: bold; font-size: 50px;}
+.custom4 .reveal h3 {color: #105b63; font-weight: bold; font-size: 50px;}
+.custom4 .reveal h4 {color: #105b63; font-weight: bold; font-size: 30px;}
+.custom4 .reveal p, 
+.custom4 .reveal li {color: black; font-size: 24px; line-height: 26px}
+
+
+.reveal .slides section .column1,
+.reveal .slides section .column2 {
+      background: #fffdf4
+
+      
+}
+
+.reveal .slides section .column img {
+   max-width: 95%;
+   max-height: 95%;
+   height: auto;
+   background: #ffffff
+}
